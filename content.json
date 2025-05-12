@@ -1,0 +1,16 @@
+{
+
+"testimonials": [
+
+        { "text":    "Excelente servicio", "author": "Carlos" },
+        { "text": "Me encanta el producto", "author": "Marta" }
+    
+    ],
+
+"faqs": [
+
+        { "question":           "¿Qué productos ofrecen?", "answer": "Ofrecemos ropa y accesorios." },
+        { "question": "¿Envían a todo el mundo?", "answer": "Sí, realizamos envíos internacionales." }
+    ]
+
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLTBIKE - Bicicletas Eléctricas</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>VOLTBIKE</h1>
+        <nav>
+            <ul>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="modelos">
+            <h2>Modelos Destacados</h2>
+            <div class="galeria-container">
+                <div class="galeria-item">
+                    <img src="assets/imgs/voltBike.jpg" alt="VoltBike Urbana">
+                    <div class="galeria-overlay">
+                        <h3>VoltBike Urbana</h3>
+                        <p>Diseño elegante para la ciudad</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="assets/imgs/mountain.png" alt="VoltBike Montaña">
+                    <div class="galeria-overlay">
+                        <h3>VoltBike Montaña</h3>
+                        <p>Potencia para terrenos difíciles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios">
+            <h2>Testimonios</h2>
+            <div id="testimonials-list"></div>
+            <button id="add-testimonial" class="btn">Agregar Testimonio</button>
+        </section>
+
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div id="faq-list"></div>
+            <button id="add-faq" class="btn">Agregar Pregunta</button>
+        </section>
+
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+            <form id="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Nombre completo" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" placeholder="Tu mensaje (mínimo 10 caracteres)" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+            <div id="form-status" class="form-status"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 VOLTBIKE - Bicicletas Eléctricas</p>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
