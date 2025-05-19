@@ -35,9 +35,9 @@ document.addEventListener( "DOMContentLoaded", (  ) => {
     faqHandler.handleFaqAccordion (  );
 
     // Configurar manejadores de eventos
-    document.getElementById ( "contact-form"   ).addEventListener ( "submit", formHandler.handleFormSubmit );
-    document.getElementById ( "add-testimonial").addEventListener ( "click", (  ) => testimonialHandler.addTestimonial (  ) );
-    document.getElementById (   "add-faq"      ).addEventListener ( "click", (  ) => faqHandler.addFaq (  ) );
+    document.getElementById ( "contact-form"    ).addEventListener ( "submit", formHandler.handleFormSubmit );
+    document.getElementById ( "add-testimonial" ).addEventListener ( "click", (  ) => testimonialHandler.addTestimonial (  ) );
+    document.getElementById (   "add-faq"       ).addEventListener ( "click", (  ) => faqHandler.addFaq (  ) );
 
     // Manejador global para testimonios y FAQs
     document.addEventListener ( "click", ( e ) => {
@@ -123,6 +123,7 @@ document.addEventListener( "DOMContentLoaded", (  ) => {
             const   form    = e.target.closest ( "form" ),
                     index   = form.dataset.index,
                     faqItem = document.querySelector ( `.faq-item[data-index="${ index }"]` );
+                    
             faqItem.querySelector ( ".faq-question" ).style.display = "block";
             faqItem.querySelector ( ".faq-actions"  ).style.display = "flex";
             form.style.display = "none";
@@ -134,9 +135,9 @@ document.addEventListener( "DOMContentLoaded", (  ) => {
 
             e.preventDefault (  );
 
-            const   form     = e.target.closest ( "form" );
-                    index    = parseInt ( form.dataset.index );
-                    question = form.querySelector (  "input"   ).value;
+            const   form     = e.target.closest ( "form" ),
+                    index    = parseInt ( form.dataset.index ),
+                    question = form.querySelector (  "input"   ).value,
                     answer   = form.querySelector ( "textarea" ).value;
 
             try {

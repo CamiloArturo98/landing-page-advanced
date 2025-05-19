@@ -25,21 +25,42 @@
         <section id="modelos">
             <h2>Modelos Destacados</h2>
             <div class="galeria-container">
+                <!-- Cada imagen en su propio item de galería -->
                 <div class="galeria-item">
-                    <img src="assets/imgs/voltBike.jpg" alt="VoltBike Urbana">
+                    <img src="assets/imgs/1.jpg" alt="VoltBike Montaña Pro">
+                    <div class="galeria-overlay">
+                        <h3>VoltBike Montaña Pro</h3>
+                        <p>Suspensión mejorada para terrenos extremos</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="assets/imgs/2.jpg" alt="VoltBike Urbana">
                     <div class="galeria-overlay">
                         <h3>VoltBike Urbana</h3>
-                        <p>Diseño elegante para la ciudad</p>
+                        <p>Diseño compacto para la ciudad</p>
                     </div>
                 </div>
                 <div class="galeria-item">
-                    <img src="assets/imgs/mountain.png" alt="VoltBike Montaña">
+                    <img src="assets/imgs/3.jpg" alt="VoltBike Speed">
                     <div class="galeria-overlay">
-                        <h3>VoltBike Montaña</h3>
-                        <p>Potencia para terrenos difíciles</p>
+                        <h3>VoltBike Speed</h3>
+                        <p>Velocidad máxima de 45 km/h</p>
                     </div>
                 </div>
-            </div>
+                <div class="galeria-item">
+                    <img src="assets/imgs/4.jpg" alt="VoltBike Adventure">
+                    <div class="galeria-overlay">
+                        <h3>VoltBike Adventure</h3>
+                        <p>Autonomía de 120 km</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="assets/imgs/WhatsApp Image 2025-05-13 at 18.46.36_5e3448b2.jpg" alt="VoltBike Custom">
+                    <div class="galeria-overlay">
+                        <h3>VoltBike Custom</h3>
+                        <p>Personalización premium</p>
+                    </div>
+                </div>
         </section>
 
         <section id="testimonios">
@@ -58,13 +79,13 @@
             <h2>Formulario de Contacto</h2>
             <form id="contact-form">
                 <div class="input-group">
-                    <input type="text" id="name" placeholder="Nombre completo" required>
+                    <input type="text" id="name" name="name" placeholder="Nombre completo" required>
                 </div>
                 <div class="input-group">
-                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
                 </div>
                 <div class="input-group">
-                    <textarea id="message" placeholder="Tu mensaje (mínimo 10 caracteres)" required></textarea>
+                    <textarea id="message" name="message" placeholder="Tu mensaje (mínimo 10 caracteres)" required></textarea>
                 </div>
                 <button type="submit" class="btn">Enviar Mensaje</button>
             </form>

@@ -205,20 +205,59 @@ export const formHandler = ( (  ) => {
         statusElement.textContent = "Enviando...";
         statusElement.className   = "form-status";
 
-        setTimeout ( (  ) => {
 
             statusElement.textContent = "¡Formulario enviado con éxito!";
             statusElement.classList.add ( "success" );
             console.log ( "Datos enviados:", formData );
-            
+
+        setTimeout ( (  ) => {
+
+            statusElement.textContent = '';
+            statusElement.classList.remove ( 'success' )
+
+        }, 5000 );
+
             // Resetear formulario
             document.getElementById ( "contact-form" ).reset (  );
-        }, 1500 );
 
     };
 
-    // Inicializar validación en tiempo real al cargar
-    document.addEventListener ( "DOMContentLoaded", setupLiveValidation );
+// Inicializar validación en tiempo real al cargar
+document.addEventListener ( "DOMContentLoaded", setupLiveValidation );
+
+document.addEventListener ( 'DOMContentLoaded', (  ) => {
+
+const form = document.getElementById( 'contact-form' );
+
+    if ( !form ) {
+        
+        console.warn( "Formulario con ID 'contact-form' no encontrado." );
+        
+        return;
+
+}
+
+const inputs = form.querySelectorAll( 'input[name], textarea[name], select[name]');
+
+inputs.forEach( input => {
+    // Cargar valores guardados
+    const savedValue = sessionStorage.getItem( input.name );
+    if ( savedValue ) {
+    
+        input.value = savedValue;
+    
+}
+
+    // Guardar cada vez que se escribe o se cambia algo
+    input.addEventListener( 'input', (  ) => {
+    sessionStorage.setItem ( input.name, input.value );
+    // console.log( `Guardado en sessionStorage: ${input.name} = ${input.value}` );
+    
+    });
+
+});
+
+});
 
     return { handleFormSubmit };
 

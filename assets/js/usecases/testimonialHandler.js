@@ -43,6 +43,7 @@ export const testimonialHandler = ( (  ) => {
         }
 
         let testimonials = getTestimonials (  );
+        
         if ( index < 0 || index >= testimonials.length ) {
 
             throw new Error ( "Índice inválido" );
